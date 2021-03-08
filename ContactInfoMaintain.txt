@@ -1,0 +1,73 @@
+1.WebAPI designed for contact information maintain system
+2.Database used- SQLITE 
+3.verbs used- GET,PUT,POST,DELETE
+4.Validations on Phone Number and Email address(PhoneNumber should be of 10 digits and numeric, Email should be valid mail address)
+5.database.db file created at locatin D:/database.db (If D Drive doesnot exists then path to db can be changed form DBConnection\DBHelper.cs)
+6.Phone Number is the primary key for the system.
+7.Open in Visual studio and run the suite using any browser and/or from PostMan
+
+
+POST call
+Add Contact
+
+http://localhost:55171/api/ContactInfoMaintain/AddContact
+Request format:
+
+{
+    "FirstName":"Rahul",
+    "lastName":"Sharma",
+    "Email":"Rahul@gmail.com",
+    "PhoneNumber":"9009355103",
+    "Status":"Active"
+}
+
+PUT call-
+Edit details:
+
+http://localhost:55171/api/ContactInfoMaintain/EditContact
+
+{
+    "FirstName":"Rahul",
+    "lastName":"Sharma",
+    "Email":"Rahul@gmail.com",
+    "PhoneNumber":"9009355103"
+}
+
+GET call-
+List Contacts:
+
+http://localhost:55171/api/ContactInfoMaintain/ListContact
+
+
+Delete Call-
+
+http://localhost:55171/api/ContactInfoMaintain/DeleteContact/{PhoneNumber}
+
+sample:
+http://localhost:55171/api/ContactInfoMaintain/DeleteContact/9098888381
+
+
+GET call-
+Change status (Active to Inactive and vice versa)
+
+http://localhost:55171/api/ContactInfoMaintain/ChangeStatus/{PhoneNumber}
+
+sample:
+http://localhost:55171/api/ContactInfoMaintain/ChangeStatus/9098888381
+
+
+Put call-
+Update Phone Number:
+
+http://localhost:55171/api/ContactInfoMaintain/UpdateContactNumber
+
+request fomat:
+
+{
+    "OldNumber":"9009350000",
+    "NewNumber":"9130000448"
+}
+
+
+
+
